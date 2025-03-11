@@ -1,0 +1,18 @@
+{% extends 'templates/base.html' %}
+
+{% block content %}
+<h2>Image List</h2>
+<div class="row">
+    {% for image in images %}
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <img class="card-img-top" src="{{ image.image.url }}" alt="Image">
+            <div class="card-body">
+                <h5 class="card-title">{{ image.title }}</h5>
+                <p class="card-text">{{ image.description }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
