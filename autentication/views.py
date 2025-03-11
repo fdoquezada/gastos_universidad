@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-
+# Create your views here.
 
 def resgister(request):
     if request.method == 'POST':
@@ -18,7 +18,7 @@ def resgister(request):
         form = UserCreationForm()
     return render(request, 'autentication/register.html', {'form': form})
 
-# Create your views here.
+
 def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
