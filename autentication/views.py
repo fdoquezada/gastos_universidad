@@ -16,7 +16,7 @@ def resgister(request):
             return redirect('home')
     else:
         form = UserCreationForm()
-    return render(request, 'register.html', {'form': form})
+    return render(request, 'autentication/register.html', {'form': form})
 
 # Create your views here.
 def login_view(request):
@@ -29,7 +29,7 @@ def login_view(request):
             return redirect('home')
         else:
             messages.error(request, 'Usuario o contraseña incorrectos')
-    return render(request, 'login.html')
+    return render(request, 'autentication/login.html')
 
 def logout_view(request):
     logout(request)
